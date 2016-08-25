@@ -99,6 +99,11 @@ public class Usuario_TO implements Serializable {
         this.contrasena = contrasena;
     }
 
+    public Usuario_TO(String var, String cc, String nombre) {
+        this.cc = cc;
+        this.nombre = nombre;
+    }
+
     public Usuario_TO(int idUsuario, String cc, String telefono, String movil, String correo, String usuario, String contrasena, Empresa_TO empresa, Rol_TO idRol, String nombre) {
         this.idUsuario = idUsuario;
         this.cc = cc;

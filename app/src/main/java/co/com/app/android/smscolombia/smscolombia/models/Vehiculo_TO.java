@@ -7,7 +7,7 @@ package co.com.app.android.smscolombia.smscolombia.models;
 
 /**
  *
- * Objeto de negocios que modelo un Tipode Vehiculo
+ * Objeto de negocios que modelo un Vehiculo
  *
  * Tabla Relacionada smscolombia
  *

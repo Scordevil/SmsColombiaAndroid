@@ -15,5 +15,6 @@ public interface RegistrarServicio {
                            @Query("puntofinalLat") String puntofinalLat, @Query("lugarinicio") String lugarinicio,
                            @Query("lugardestino") String lugardestino, @Query("placa") String placa,
                            @Query("costo") String costo, @Query("idusuario") int idusuario,
-                           @Query("idempresa") int idempresaa, Callback<Servicio_TO> callback);
+                           @Query("idempresa") int idempresa, @Query("nombreCliente") String nombreCliente,
+                           @Query("ccCliente") String ccCliente, Callback<Servicio_TO> callback);
 }

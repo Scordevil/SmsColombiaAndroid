@@ -10,6 +10,6 @@ import retrofit.http.Query;
  * Created by VaioDevelopment on 18/08/2016.
  */
 public interface ConsutarTarifa {
-    @GET("/consutarTarifa")
-    void consutarTarifa(Callback<Tarifa_TO> callback);
+    @GET("/consultarTarifa")
+    void consultarTarifa(@Query("idTipoVehiculo") int idTipoVehiculo, Callback<Tarifa_TO> callback);
 }

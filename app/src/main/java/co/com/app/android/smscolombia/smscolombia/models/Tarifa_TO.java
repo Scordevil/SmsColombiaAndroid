@@ -77,11 +77,17 @@ public class Tarifa_TO {
      */
     private Vehiculo_TO vehiculo;
 
+    /**
+     *
+     * Columna costo
+     */
+    private int costo;
+
     //Constructores
     public Tarifa_TO() {
     }
 
-    public Tarifa_TO(int idTarifa, String minima, String kilometrosMenorQue, String kilometrosMayorQue, String minutos, String servicioPorHora, String servicioAeropuerto, String arranqueOBanderazoPico, String arranqueOBanderazoValle, Vehiculo_TO vehiculo) {
+    public Tarifa_TO(int idTarifa, String minima, String kilometrosMenorQue, String kilometrosMayorQue, String minutos, String servicioPorHora, String servicioAeropuerto, String arranqueOBanderazoPico, String arranqueOBanderazoValle, Vehiculo_TO vehiculo, int costo) {
         this.idTarifa = idTarifa;
         this.minima = minima;
         this.kilometrosMenorQue = kilometrosMenorQue;
@@ -92,6 +98,7 @@ public class Tarifa_TO {
         this.arranqueOBanderazoPico = arranqueOBanderazoPico;
         this.arranqueOBanderazoValle = arranqueOBanderazoValle;
         this.vehiculo = vehiculo;
+        this.costo = costo;
     }
 
     //Getters and Setters
@@ -175,9 +182,28 @@ public class Tarifa_TO {
         this.vehiculo = vehiculo;
     }
 
-    @Override
-    public String toString() {
-        return "Tarifa_TO{" + "idTarifa=" + idTarifa + ", minima=" + minima + ", kilometrosMenorQue=" + kilometrosMenorQue + ", kilometrosMayorQue=" + kilometrosMayorQue + ", minutos=" + minutos + ", servicioPorHora=" + servicioPorHora + ", servicioAeropuerto=" + servicioAeropuerto + ", arranqueOBanderazoPico=" + arranqueOBanderazoPico + ", arranqueOBanderazoValle=" + arranqueOBanderazoValle + ", vehiculo=" + vehiculo + '}';
+    public int getCosto() {
+        return costo;
     }
 
+    public void setCosto(int costo) {
+        this.costo = costo;
+    }
+
+    @Override
+    public String toString() {
+        return "Tarifa_TO{" +
+                "idTarifa=" + idTarifa +
+                ", minima='" + minima + '\'' +
+                ", kilometrosMenorQue='" + kilometrosMenorQue + '\'' +
+                ", kilometrosMayorQue='" + kilometrosMayorQue + '\'' +
+                ", minutos='" + minutos + '\'' +
+                ", servicioPorHora='" + servicioPorHora + '\'' +
+                ", servicioAeropuerto='" + servicioAeropuerto + '\'' +
+                ", arranqueOBanderazoPico='" + arranqueOBanderazoPico + '\'' +
+                ", arranqueOBanderazoValle='" + arranqueOBanderazoValle + '\'' +
+                ", vehiculo=" + vehiculo +
+                ", costo=" + costo +
+                '}';
+    }
 }

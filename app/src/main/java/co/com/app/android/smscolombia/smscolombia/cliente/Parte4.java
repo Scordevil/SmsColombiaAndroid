@@ -78,12 +78,12 @@ public class Parte4 extends SampleActivityBase
     String ruta = serverRequests.BuscarRuta();
 
     String lugarInicio;
-    String puntoinicioLong;
-    String puntofinalLong;
-    String puntoinicioLat;
-    String puntofinalLat;
+    static String puntoinicioLong;
+    static String puntofinalLong;
+    static String puntoinicioLat;
+    static String puntofinalLat;
     String lugardestino;
-    int kilometros;
+    static int kilometros;
 
     Servicio_TO servicio = new Servicio_TO();
 
@@ -533,7 +533,7 @@ public class Parte4 extends SampleActivityBase
         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(center, 13));
     }
 
-    public void buscaDistancia(String result) {
+    public static void buscaDistancia(String result) {
 
         Route_TO ruta = new Route_TO();
         // turn the stream into a string

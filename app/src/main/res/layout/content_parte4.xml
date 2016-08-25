@@ -69,17 +69,6 @@
             android:layout_marginBottom="5dp">
 
             <Button
-                android:id="@+id/btnReset"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/button_orange"
-                android:layout_marginRight="10dp"
-                android:layout_width="140dp"
-                android:padding="1dp"
-                android:text="Reiniciar"
-                />
-
-            <Button
                 android:id="@+id/button_buscar"
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
@@ -89,38 +78,18 @@
                 android:text="Buscar"
                 />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_horizontal">
-
-
-            <Button
-                android:id="@+id/btnCancelarR"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/button_orange"
-                android:layout_marginRight="10dp"
-                android:layout_width="140dp"
-                android:padding="1dp"
-                android:text="Cancelar"
-                />
-
             <Button
                 android:id="@+id/btnAceptar"
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/button_orange"
+                android:enabled="false"
                 android:padding="1dp"
                 android:text="Siguiente"
                 />
 
         </LinearLayout>
-
 
     </LinearLayout>
 

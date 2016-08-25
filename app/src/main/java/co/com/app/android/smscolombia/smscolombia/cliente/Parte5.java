@@ -225,7 +225,7 @@ public class Parte5 extends AppCompatActivity implements View.OnClickListener {
 
             if (Integer.parseInt(costo) <= Integer.parseInt(recibido)) {
                 cambio = Integer.parseInt(recibido) - Integer.parseInt(costo);
-                etCambio.setText(cambio + "");
+                etCambio.setText("$"+cambio);
             } else {
                 etCambio.setText("");
             }

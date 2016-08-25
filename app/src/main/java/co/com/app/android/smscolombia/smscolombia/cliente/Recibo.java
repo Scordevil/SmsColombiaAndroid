@@ -101,7 +101,9 @@ public class Recibo extends AppCompatActivity implements View.OnClickListener {
 
     public void generarPDFOnClick(View v){
 
-        Document document = new Document(PageSize.LETTER);
+        userLocalStore = new UserLocalStore(this);
+
+        Document document = new Document(PageSize.A6);
 
         String NOMBRE_ARCHIVO = "ReciboPDF.pdf";
         String tarjetaSD= Environment.getExternalStorageDirectory().toString();
@@ -191,7 +193,7 @@ public class Recibo extends AppCompatActivity implements View.OnClickListener {
         etInicio.setText(servicio.getLugarInicio());
         etDestino.setText(servicio.getLugarDestino());
         etPlaca.setText(servicio.getPlaca());
-        etCosto.setText(servicio.getCosto());
+        etCosto.setText("$"+servicio.getCosto());
 
     }
 

@@ -28,11 +28,14 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.Calendar;
 
 import co.com.app.android.smscolombia.smscolombia.R;
 import co.com.app.android.smscolombia.smscolombia.config.UserLocalStore;
 import co.com.app.android.smscolombia.smscolombia.models.Servicio_TO;
+import co.com.app.android.smscolombia.smscolombia.models.Tarifa_TO;
 import co.com.app.android.smscolombia.smscolombia.models.Usuario_TO;
+import co.com.app.android.smscolombia.smscolombia.sevice.CalcularTarifa;
 import co.com.app.android.smscolombia.smscolombia.sevice.ConsultarCliente;
 import co.com.app.android.smscolombia.smscolombia.sevice.ServerRequests;
 import retrofit.Callback;
@@ -52,6 +55,8 @@ public class Recibo extends AppCompatActivity implements View.OnClickListener {
 
     EditText etNombre, etInicio, etDestino, etPlaca, etCosto;
     Button bFinalizar;
+
+    String nombreCliente;
 
     Servicio_TO servicio = new Servicio_TO();
 
@@ -101,11 +106,17 @@ public class Recibo extends AppCompatActivity implements View.OnClickListener {
 
     public void generarPDFOnClick(View v){
 
+        Calendar C = Calendar.getInstance();
+        int sAnio = C.get(Calendar.YEAR);
+        int sMes = C.get(Calendar.MONTH);
+        int sDia = C.get(Calendar.DAY_OF_MONTH);
+        int sHora = C.get(Calendar.HOUR_OF_DAY);
+
         userLocalStore = new UserLocalStore(this);
 
         Document document = new Document(PageSize.A6);
 
-        String NOMBRE_ARCHIVO = "ReciboPDF.pdf";
+        String NOMBRE_ARCHIVO = "Servicio_"+nombreCliente.toString()+"_"+sAnio+sMes+sDia+sHora+".pdf";
         String tarjetaSD= Environment.getExternalStorageDirectory().toString();
         File pdfDir = new File(tarjetaSD + File.separator + NOMBRE_CARPETA_APP);
 
@@ -132,6 +143,8 @@ public class Recibo extends AppCompatActivity implements View.OnClickListener {
 
             //Crear el documento
 
+            Log.i("Servicio: ", servicio.toString());
+
             document.open();
             document.addAuthor("Gustavo Cárdenas");
             document.addCreator("Gustavo Cárdenas");
@@ -145,8 +158,8 @@ public class Recibo extends AppCompatActivity implements View.OnClickListener {
                     "</head> " +
                     "<body> " +
                     "<h1>SMS Colombia</h1> " +
-                    "<p> Nombre Asesor: "+userLocalStore.getLoggedInUser().getNombre()+"</p> " +
-                    "<p> Nombre Cliente: "+servicio.getUsuario().getNombre()+" </p> " +
+                    "<p> Nombre Asesor: "+userLocalStore.getLoggedInUser().getNombre().toString()+"</p> " +
+                    "<p> Nombre Cliente: "+nombreCliente.toString()+" </p> " +
                     "<p> Lugar de Inicio: "+servicio.getLugarInicio()+"</p> " +
                     "<p> Lugar de Destino: "+servicio.getLugarDestino()+"</p> " +
                     "<p> Placa: "+servicio.getPlaca()+" </p> "+
@@ -200,7 +213,7 @@ public class Recibo extends AppCompatActivity implements View.OnClickListener {
         etInicio.setText(servicio.getLugarInicio());
         etDestino.setText(servicio.getLugarDestino());
         etPlaca.setText(servicio.getPlaca());
-        etCosto.setText("$"+servicio.getCosto());
+        etCosto.setText("$" + servicio.getCosto());
 
     }
 
@@ -216,6 +229,7 @@ public class Recibo extends AppCompatActivity implements View.OnClickListener {
 
                 if (usuario.getIdUsuario() > 0) {
                     etNombre.setText(usuario.getNombre());
+                    nombreCliente = usuario.getNombre();
                 }
 
             }
@@ -228,6 +242,7 @@ public class Recibo extends AppCompatActivity implements View.OnClickListener {
         });
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -173,7 +173,7 @@ public class Parte4 extends SampleActivityBase
       //  btnCancelarR = (Button) findViewById(R.id.btnCancelarR);
         button_buscar = (Button) findViewById(R.id.button_buscar);
 
-        btnReset.setOnClickListener(new View.OnClickListener() {
+/*        btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 autocomplete_places_desde.setText("");
@@ -187,7 +187,7 @@ public class Parte4 extends SampleActivityBase
                 pruebaMapa();
                 Log.i("GustavoLimpiar", "limpiar");
             }
-        });
+        });*/
 
         button_buscar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -209,9 +209,17 @@ public class Parte4 extends SampleActivityBase
                         autocomplete_places_desde.setEnabled(false);
                         autocomplete_places_hasta.setEnabled(false);
                     } else {
-                        Toast.makeText(getApplicationContext(), "Las direcciones deben ser mas especificas",
-                                Toast.LENGTH_SHORT).show();
+                        if (result.size() > 1 || result2.size() > 1) {
+                            pintarRuta();
+                            autocomplete_places_desde.setEnabled(false);
+                            autocomplete_places_hasta.setEnabled(false);
+                            Toast.makeText(getApplicationContext(), "Se muestra la ruta mas corta",
+                                    Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Las direcciones deben ser mas especificas",
+                                    Toast.LENGTH_SHORT).show();
 
+                        }
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -238,7 +246,7 @@ public class Parte4 extends SampleActivityBase
         });
 
 
-        btnCancelarR.setOnClickListener(new View.OnClickListener() {
+/*        btnCancelarR.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -253,7 +261,7 @@ public class Parte4 extends SampleActivityBase
                             }})
                         .setNegativeButton(android.R.string.no, null).show();
             }
-        });
+        });*/
     }
 
     @Override

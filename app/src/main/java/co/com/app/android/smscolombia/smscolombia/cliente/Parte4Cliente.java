@@ -144,8 +144,8 @@ public class Parte4Cliente extends SampleActivityBase
         // Set up the 'clear text' button that clears the text in the autocomplete view
         tvDistancia = (TextView) findViewById(R.id.tvDistancia);
         btnAceptar  = (Button) findViewById(R.id.btnAceptar);;
-        btnReset = (Button) findViewById(R.id.btnReset);
-        btnCancelarR = (Button) findViewById(R.id.btnCancelarR);
+       // btnReset = (Button) findViewById(R.id.btnReset);
+       // btnCancelarR = (Button) findViewById(R.id.btnCancelarR);
         button_buscar = (Button) findViewById(R.id.button_buscar);
 
         btnReset.setOnClickListener(new View.OnClickListener() {

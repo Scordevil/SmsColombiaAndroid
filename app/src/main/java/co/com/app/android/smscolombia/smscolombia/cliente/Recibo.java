@@ -9,7 +9,6 @@ import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Editable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -32,14 +31,9 @@ import java.io.StringReader;
 
 import co.com.app.android.smscolombia.smscolombia.R;
 import co.com.app.android.smscolombia.smscolombia.config.UserLocalStore;
-import co.com.app.android.smscolombia.smscolombia.models.Empresa_TO;
 import co.com.app.android.smscolombia.smscolombia.models.Servicio_TO;
-import co.com.app.android.smscolombia.smscolombia.models.Tarifa_TO;
 import co.com.app.android.smscolombia.smscolombia.models.Usuario_TO;
 import co.com.app.android.smscolombia.smscolombia.sevice.ConsultarCliente;
-import co.com.app.android.smscolombia.smscolombia.sevice.ConsultarEmpresa;
-import co.com.app.android.smscolombia.smscolombia.sevice.ConsultarServicio;
-import co.com.app.android.smscolombia.smscolombia.sevice.ConsutarTarifa;
 import co.com.app.android.smscolombia.smscolombia.sevice.ServerRequests;
 import retrofit.Callback;
 import retrofit.RestAdapter;
@@ -148,8 +142,8 @@ public class Recibo extends AppCompatActivity implements View.OnClickListener {
                     "<head> " +
                     "</head> " +
                     "<body> " +
-                    "<h1>Titulo</h1> " +
-                    "<p> Nombre Asesor: </p> " +
+                    "<h1>SMS Colombia</h1> " +
+                    "<p> Nombre Asesor: "+userLocalStore.getLoggedInUser().getNombre()+"</p> " +
                     "<p> Nombre Cliente: "+servicio.getUsuario().getNombre()+" </p> " +
                     "<p> Lugar de Inicio: "+servicio.getLugarInicio()+"</p> " +
                     "<p> Lugar de Destino: "+servicio.getLugarDestino()+"</p> " +

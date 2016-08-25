@@ -85,6 +85,7 @@
             android:id="@+id/etCosto"
             android:layout_width="match_parent"
             android:layout_marginBottom="10dp"
+            android:enabled="false"
             android:layout_height="wrap_content" />
 
         <TextView
@@ -106,6 +107,7 @@
         <EditText
             android:id="@+id/etCambio"
             android:layout_width="match_parent"
+            android:enabled="false"
             android:layout_marginBottom="10dp"
             android:layout_height="wrap_content" />
 
@@ -117,7 +119,7 @@
             android:layout_height="wrap_content"
             android:paddingRight="5dp"
             android:paddingLeft="5dp"
-            android:background="@drawable/button_blue"
+            android:background="@drawable/button_orange"
             android:layout_gravity="center"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
@@ -130,7 +132,7 @@
             android:layout_height="wrap_content"
             android:paddingRight="5dp"
             android:paddingLeft="5dp"
-            android:background="@drawable/button_blue"
+            android:background="@drawable/button_orange"
             android:layout_gravity="center"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"

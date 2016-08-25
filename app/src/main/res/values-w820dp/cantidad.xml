@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Taxi">
+        <item></item>
+        <item>01</item>
+    </string-array>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".cliente.Parte3"
+    tools:showIn="@layout/activity_parte3">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Selección de Lugar"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorBlue"
+        android:layout_marginBottom="15dp"
+        android:paddingTop="3dp"
+        android:layout_height="30dp"
+        android:textSize="15dp"
+        android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="200dp"
+        android:id="@+id/bManual"
+        android:text="Selección Manual"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:background="@drawable/button_blue"
+        android:layout_gravity="center"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Ó"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/bAutomatica"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp" />
+
+    <Button
+        android:layout_width="200dp"
+        android:id="@+id/bAutomatica"
+        android:text="Selección Automática"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:background="@drawable/button_blue"
+        android:layout_gravity="center"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_alignLeft="@+id/bManual"
+        android:layout_alignStart="@+id/bManual"
+        android:layout_marginTop="96dp" />
+
+</RelativeLayout>

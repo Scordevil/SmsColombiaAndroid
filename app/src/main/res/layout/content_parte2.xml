@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".cliente.Parte2"
+    tools:showIn="@layout/activity_parte2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Registro de Usuario"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorBlue"
+            android:layout_marginBottom="15dp"
+            android:paddingTop="3dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="15dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="No tiene Convenio"
+            android:id="@+id/tvConvenio"
+            android:gravity="center"
+            android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Número de Documento"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etCC"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:enabled="false"
+        android:layout_height="wrap_content" />
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:text="Nombres"
+    android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Apellidos"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etApellidos"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Número de Telefono"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etTelefono"
+        android:layout_width="match_parent"
+        android:hint="Opcional"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Número de Movil"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etMovil"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Correo Electrónico"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:hint="Opcional"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:layout_width="200dp"
+        android:id="@+id/bRegistrar"
+        android:text="Registrar"
+        android:layout_height="wrap_content"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:background="@drawable/button_blue"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="73dp" />
+
+    </LinearLayout>
+
+
+</ScrollView>

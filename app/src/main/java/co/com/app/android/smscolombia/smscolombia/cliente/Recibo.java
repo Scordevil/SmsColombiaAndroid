@@ -93,7 +93,7 @@ public class Recibo extends AppCompatActivity implements View.OnClickListener {
         switch (v.getId()) {
 
             case R.id.bFinalizar:
-
+                generarPDFOnClick(v);
                 break;
 
         }
@@ -185,6 +185,13 @@ public class Recibo extends AppCompatActivity implements View.OnClickListener {
         }catch (ActivityNotFoundException e){
             Toast.makeText(context, "No tiene una app para abrir este tipo de archivo", Toast.LENGTH_LONG).show();
         }
+
+        finalizar();
+    }
+
+    public void finalizar(){
+        Intent intent = new Intent(Recibo.this, MainActivity.class);
+        startActivity(intent);
     }
 
     private void LlenarFormulario(){
